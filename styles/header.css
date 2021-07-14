@@ -1,18 +1,12 @@
 @font-face {
   font-family: dinosaur;
-  src: url(../fonts/dinosaur-bold.woff);
-  font-weight: bold;
-  font-style: normal; }
+  src: url(../fonts/dinosaur-bold.woff); }
 @font-face {
-  font-family: dinosaur;
-  src: url(../fonts/dinosaur-ligth.woff);
-  font-weigth: light;
-  font-style: normal; }
+  font-family: dinosaur-light;
+  src: url(../fonts/dinosaur-ligth.woff); }
 @font-face {
-  font-family: dinosaur;
-  src: url(../fonts/dinosaur-medium.woff);
-  font-weight: normal;
-  font-style: normal; }
+  font-family: dinosaur-medium;
+  src: url(../fonts/dinosaur-medium.woff); }
 body, html {
   margin: 0px;
   font-family: dinosaur; }
@@ -22,6 +16,12 @@ body, html {
 
 .mr23 {
   margin-right: 23px; }
+
+.ml15 {
+  margin-left: 15px; }
+
+.mr15 {
+  margin-right: 15px; }
 
 nav {
   width: 100vw;
@@ -85,10 +85,13 @@ section {
     margin: 0px;
     font-size: 62px; }
   section p {
+    font-size: 16px;
+    line-height: 24px;
     width: 445px;
     font-weight: lighter;
     margin-top: 80px;
-    font-style: light; }
+    font-style: light;
+    font-family: dinosaur-ligth; }
   section button {
     margin-top: 66px;
     background: #212429;

@@ -1,21 +1,18 @@
 @font-face {
   font-family: dinosaur;
-  src: url(../fonts/dinosaur-bold.woff);
-  font-weight: bold;
-  font-style: normal; }
+  src: url(../fonts/dinosaur-bold.woff); }
 @font-face {
-  font-family: dinosaur;
-  src: url(../fonts/dinosaur-ligth.woff);
-  font-weigth: light;
-  font-style: normal; }
+  font-family: dinosaur-light;
+  src: url(../fonts/dinosaur-ligth.woff); }
 @font-face {
-  font-family: dinosaur;
-  src: url(../fonts/dinosaur-medium.woff);
-  font-weight: normal;
-  font-style: normal; }
+  font-family: dinosaur-medium;
+  src: url(../fonts/dinosaur-medium.woff); }
 body, html {
   margin: 0px;
   font-family: dinosaur; }
+
+html {
+  overflow-x: hidden; }
 
 .ml23 {
   margin-left: 23px; }
@@ -56,15 +53,17 @@ main {
 
 .bar {
   position: absolute;
-  width: 100vw;
+  width: 160vw;
   height: 194px;
-  left: -600px;
-  top: 511px;
+  left: -650px;
+  top: 505px;
   background: #83BAEA;
   transform: rotate(-41deg);
   z-index: 0; }
 
 .beer-informations {
+  z-index: 10;
+  position: relative;
   margin: 0px auto 0px auto;
   display: flex; }
   .beer-informations .bottle {
@@ -78,8 +77,11 @@ main {
       margin-bottom: 40px; }
     .beer-informations .information p:nth-of-type(2) {
       line-height: 32px;
-      font-size: 16px; }
+      font-size: 16px;
+      font-style: light;
+      font-family: dinosaur-light; }
     .beer-informations .information h6 {
+      color: #ffff;
       line-height: 16px;
       font-size: 14px;
       margin-top: 200px;
@@ -109,6 +111,7 @@ main {
         line-height: 24px;
         margin: 50px 0px 5px 0px; }
       .beer-informations .ingredients .ingredient .lineTwo {
+        font-family: dinosaur-ligth;
         font-size: 16px;
         line-height: 24px;
         color: #ACB5BD;
