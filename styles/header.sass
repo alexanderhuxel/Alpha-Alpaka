@@ -1,0 +1,98 @@
+@import ../styles/styles.sass
+nav
+    width: 100vw
+    height: 140px
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    ul
+        padding: unset
+        display: flex
+        list-style: none
+        align-items: center
+        li
+            &:nth-of-type(5)
+                margin: 0px 80px 0px 48px
+            a
+                text-decoration: none
+                line-height: 24px
+                font-size: 16px
+                font-family: dinosaur
+                color: $fontcolorBlack
+        button
+            background: $ligthblue
+            border-radius: 22px
+            padding: 10px 20px 10px 20px
+            font-family: dinosaur
+            font-weight: 700
+            color: $white
+            border: none
+
+header
+    background: $gray
+    height: 840px
+    position: relative
+    z-index: 10
+
+.social-container
+    position: absolute
+    bottom: 54px
+    right: 60px
+    width: 25px
+    height: auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    img
+        &:hover
+            cursor: pointer
+        &:nth-of-type(1)
+            margin-bottom: 20px
+section
+    z-index: 100!important
+    margin-left: 380px
+    margin-top: calc( 200px - 140px )
+
+    width: 540px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+    position: relative
+    h1
+        margin: 0px
+        font-size: 62px
+    p
+        width: 445px
+        font-weight: lighter
+        margin-top: 80px
+        font-style: light
+    button
+        margin-top: 66px
+        background: $fontcolorBlack
+        color: $white
+        border: none
+        border-radius: 22px
+        padding: 12px 24px 12px 24px
+        font-weight: 700
+        margin-bottom: 186px
+        &:hover
+            cursor: pointer
+    img
+        &:hover
+            cursor: pointer
+.label
+    z-index: 0
+    transform: rotate(7deg)
+    position: absolute
+    top: 58px
+    left: 223px
+    img
+        width: 240px
+        height: 240px
+.bottleGroup
+    position: absolute
+    width: 900px
+    height: 900px
+    top: 190px
+    right: 171px

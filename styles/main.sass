@@ -1,0 +1,97 @@
+@import ../styles/styles.sass
+main
+    position: relative
+    width: 100vw
+    height: auto
+    background: $white
+.icon
+    object-fit: fill
+    width: 42px
+    height: 42px
+.headline
+    position: relative
+    z-index: 10
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 170px
+    h2
+        font-size: 40px
+    p
+        width: 1120px
+        line-height: 40px
+        font-size: 24px
+.bar
+    position: absolute
+    width: 100vw
+    height: 194px
+    left: -600px
+    top: 511px
+    background: #83BAEA
+    transform: rotate(-41deg)
+    z-index: 0
+.beer-informations
+    margin: 0px auto 0px auto
+    display: flex
+    .bottle
+        width: 900px
+        height: 900px
+    .information
+        width: 540px
+        p
+            &:nth-of-type(1)
+                line-height: 40px
+                font-size: 24px
+                margin-bottom: 40px
+            &:nth-of-type(2)
+                line-height: 32px
+                font-size: 16px
+        h6
+            line-height: 16px
+            font-size: 14px
+            margin-top: 200px
+            margin-bottom: 16px
+        h2
+            margin-bottom: 80px
+            line-height: 32px
+            font-size: 24px
+    .ingredients
+        display: flex
+        .ingredient
+            margin-top: 40px
+            width: 160px
+            height: 158px
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            align-items: flex-start
+            &:nth-of-type(2)
+                padding-left: 30px
+                border-left: solid 0.5px $gray2
+                border-right: solid 0.5px $gray2
+            &:nth-of-type(3)
+                padding-left: 30px
+
+            .lineOne
+                font-size: 16px
+                line-height: 24px
+                margin: 50px 0px 5px 0px
+            .lineTwo
+                font-size: 16px
+                line-height: 24px
+                color: $gray2
+                margin: 5px 0px 50px 0px
+.bars
+    margin-bottom: 250px
+    display: flex
+    flex-direction: column
+    .progress
+        progress
+            width: 225px
+            color: $ligthblue!important
+
+    .upperLine
+        display: flex
+
+    .lowerLine
+        display: flex

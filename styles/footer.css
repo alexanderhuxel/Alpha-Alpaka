@@ -1,3 +1,68 @@
+@font-face {
+  font-family: dinosaur;
+  src: url(../fonts/dinosaur-bold.woff);
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: dinosaur;
+  src: url(../fonts/dinosaur-ligth.woff);
+  font-weigth: light;
+  font-style: normal; }
+@font-face {
+  font-family: dinosaur;
+  src: url(../fonts/dinosaur-medium.woff);
+  font-weight: normal;
+  font-style: normal; }
+body, html {
+  margin: 0px;
+  font-family: dinosaur; }
 
+.ml23 {
+  margin-left: 23px; }
+
+.mr23 {
+  margin-right: 23px; }
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .row .box {
+    line-height: 40px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 370px;
+    height: 200px; }
+    .row .box:nth-of-type(1) {
+      background: #ACB5BD; }
+    .row .box:nth-of-type(2) {
+      background: #F4F2EC; }
+    .row .box:nth-of-type(3) {
+      background: #E0DED8; }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  footer ul {
+    list-style: none;
+    display: flex; }
+    footer ul li a {
+      margin: 0px 10px 0px 10px;
+      text-decoration: none; }
+
+.logo {
+  width: 254px;
+  height: 148px;
+  margin: 40px 0px 80px 0px; }
+
+.socialmedia img {
+  margin: 0px 10px 0px 10px; }
+  .socialmedia img:hover {
+    cursor: pointer; }
 
 /*# sourceMappingURL=footer.css.map */
