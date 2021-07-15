@@ -3,6 +3,8 @@
     display: flex
     justify-content: center
     align-items: center
+    @media screen and ( max-width: 600px )
+        flex-direction: column
     .box
         line-height: 40px
         font-size: 24px
@@ -12,6 +14,8 @@
         justify-content: center
         width: 370px
         height: 200px
+        p
+            margin-bottom: 47px
         &:nth-of-type(1)
             background: $gray2
         &:nth-of-type(2)
@@ -26,11 +30,15 @@ footer
     ul
         list-style: none
         display: flex
+        @media screen and ( max-width: 600px  )
+            padding-left: 0px
         li
 
             a
+                color: $fontcolorBlack
                 margin: 0px 10px 0px 10px
                 text-decoration: none
+                font-size: 16px
 .logo
     width: 254px
     height: 148px
@@ -40,3 +48,8 @@ footer
         margin: 0px 10px 0px 10px
         &:hover
             cursor: pointer
+.icon
+    object-fit: fill
+    width: 42px
+    height: 42px
+    margin: 50px 0px 24px 0px

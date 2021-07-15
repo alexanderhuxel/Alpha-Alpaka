@@ -5,11 +5,14 @@ nav
     display: flex
     align-items: center
     justify-content: flex-end
+
     ul
         padding: unset
         display: flex
         list-style: none
         align-items: center
+        @media screen and ( max-width: 600px )
+            display: none
         li
             &:nth-of-type(5)
                 margin: 0px 80px 0px 48px
@@ -30,9 +33,13 @@ nav
 
 header
     background: $gray
-    height: 840px
+    height: auto
     position: relative
     z-index: 10
+    @media screen and ( max-width:600  )
+        display: flex
+        justify-content: center
+        align-items: center
 
 .social-container
     position: absolute
@@ -43,6 +50,9 @@ header
     display: flex
     flex-direction: column
     align-items: center
+    @media screen and ( max-width:  600px)
+        display: none
+
     img
         &:hover
             cursor: pointer
@@ -52,13 +62,36 @@ section
     z-index: 100!important
     margin-left: 380px
     margin-top: calc( 200px - 140px )
-
     width: 540px
     display: flex
     flex-direction: column
     justify-content: space-between
     align-items: flex-start
     position: relative
+    @media screen and ( max-width: 600px )
+        width: auto
+        margin: 490px 15px 0px 15px
+        h1
+            font-size: 50px!important
+            line-height: 56px
+            text-align: center
+            width: 100%
+            word-break: normal
+            margin: 0px 15px
+        p
+            margin: 0px auto
+            width: 100%!important
+            text-align: center
+        button
+            margin: 0px auto 0px auto
+            margin-bottom: 60px!important
+        img
+            margin: 0px auto 0px auto
+        img
+            position: absolute
+            top: -15px
+            left: 50%
+
     h1
         margin: 0px
         font-size: 62px
@@ -90,6 +123,12 @@ section
     position: absolute
     top: 58px
     left: 223px
+    @media screen and ( max-width: 600px )
+        width: 120px
+        height: 120px
+        top: 20px
+        left: 20px
+
     img
         width: 240px
         height: 240px
@@ -97,5 +136,19 @@ section
     position: absolute
     width: 900px
     height: 900px
-    top: 190px
-    right: 171px
+    top: 35px
+    left: -162px
+    @media screen and ( max-width: 600px )
+        width: 628px
+        height: 628px
+        top: 40px
+        left: -180px
+.menu
+    display: none
+    position: absolute
+    top: 40px
+    right: 40px
+    height: 24px
+    width: 24px
+    @media screen and ( max-width: 600px )
+        display: block

@@ -1,21 +1,18 @@
 @font-face {
   font-family: dinosaur;
-  src: url(../fonts/dinosaur-bold.woff);
-  font-weight: bold;
-  font-style: normal; }
+  src: url(../fonts/dinosaur-bold.woff); }
 @font-face {
-  font-family: dinosaur;
-  src: url(../fonts/dinosaur-ligth.woff);
-  font-weigth: light;
-  font-style: normal; }
+  font-family: dinosaur-light;
+  src: url(../fonts/dinosaur-ligth.woff); }
 @font-face {
-  font-family: dinosaur;
-  src: url(../fonts/dinosaur-medium.woff);
-  font-weight: normal;
-  font-style: normal; }
+  font-family: dinosaur-medium;
+  src: url(../fonts/dinosaur-medium.woff); }
 body, html {
   margin: 0px;
   font-family: dinosaur; }
+
+html {
+  overflow-x: hidden; }
 
 .ml23 {
   margin-left: 23px; }
@@ -23,10 +20,19 @@ body, html {
 .mr23 {
   margin-right: 23px; }
 
+.ml15 {
+  margin-left: 15px; }
+
+.mr15 {
+  margin-right: 15px; }
+
 .row {
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media screen and (max-width: 600px) {
+    .row {
+      flex-direction: column; } }
   .row .box {
     line-height: 40px;
     font-size: 24px;
@@ -36,6 +42,8 @@ body, html {
     justify-content: center;
     width: 370px;
     height: 200px; }
+    .row .box p {
+      margin-bottom: 47px; }
     .row .box:nth-of-type(1) {
       background: #ACB5BD; }
     .row .box:nth-of-type(2) {
@@ -51,9 +59,14 @@ footer {
   footer ul {
     list-style: none;
     display: flex; }
+    @media screen and (max-width: 600px) {
+      footer ul {
+        padding-left: 0px; } }
     footer ul li a {
+      color: #212429;
       margin: 0px 10px 0px 10px;
-      text-decoration: none; }
+      text-decoration: none;
+      font-size: 16px; }
 
 .logo {
   width: 254px;
@@ -64,5 +77,11 @@ footer {
   margin: 0px 10px 0px 10px; }
   .socialmedia img:hover {
     cursor: pointer; }
+
+.icon {
+  object-fit: fill;
+  width: 42px;
+  height: 42px;
+  margin: 50px 0px 24px 0px; }
 
 /*# sourceMappingURL=footer.css.map */

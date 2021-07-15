@@ -4,10 +4,7 @@ main
     width: 100vw
     height: auto
     background: $white
-.icon
-    object-fit: fill
-    width: 42px
-    height: 42px
+
 .headline
     position: relative
     z-index: 10
@@ -15,6 +12,14 @@ main
     flex-direction: column
     align-items: center
     margin-top: 170px
+    @media screen and ( max-width: 600px )
+        margin-top: 80px
+        h2,p
+            width: 90%!important
+            margin: 0px 15px 0px 15px
+            text-align: center
+        p
+            margin-top: 50px
     h2
         font-size: 40px
     p
@@ -26,12 +31,14 @@ main
     width: 160vw
     height: 194px
     left: -650px
-    top: 505px
+    top: 655px
     background: #83BAEA
     transform: rotate(-41deg)
     z-index: 0
 .beer-informations
     z-index: 10
+    justify-content: center
+    align-items: center
     position: relative
     margin: 0px auto 0px auto
     display: flex
@@ -94,10 +101,15 @@ main
     .progress
         progress
             width: 225px
-            color: $ligthblue!important
+            height: 5px
+            border-radius: 20px
+            &::-moz-progress-bar
+                background: $ligthblue
 
     .upperLine
         display: flex
+        letter-spacing: 2px
 
     .lowerLine
         display: flex
+        letter-spacing: 2px

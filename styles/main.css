@@ -32,11 +32,6 @@ main {
   height: auto;
   background: #ffff; }
 
-.icon {
-  object-fit: fill;
-  width: 42px;
-  height: 42px; }
-
 .headline {
   position: relative;
   z-index: 10;
@@ -44,6 +39,15 @@ main {
   flex-direction: column;
   align-items: center;
   margin-top: 170px; }
+  @media screen and (max-width: 600px) {
+    .headline {
+      margin-top: 80px; }
+      .headline h2, .headline p {
+        width: 90% !important;
+        margin: 0px 15px 0px 15px;
+        text-align: center; }
+      .headline p {
+        margin-top: 50px; } }
   .headline h2 {
     font-size: 40px; }
   .headline p {
@@ -56,13 +60,15 @@ main {
   width: 160vw;
   height: 194px;
   left: -650px;
-  top: 505px;
+  top: 655px;
   background: #83BAEA;
   transform: rotate(-41deg);
   z-index: 0; }
 
 .beer-informations {
   z-index: 10;
+  justify-content: center;
+  align-items: center;
   position: relative;
   margin: 0px auto 0px auto;
   display: flex; }
@@ -123,10 +129,15 @@ main {
   flex-direction: column; }
   .bars .progress progress {
     width: 225px;
-    color: #83BAEA !important; }
+    height: 5px;
+    border-radius: 20px; }
+    .bars .progress progress::-moz-progress-bar {
+      background: #83BAEA; }
   .bars .upperLine {
-    display: flex; }
+    display: flex;
+    letter-spacing: 2px; }
   .bars .lowerLine {
-    display: flex; }
+    display: flex;
+    letter-spacing: 2px; }
 
 /*# sourceMappingURL=main.css.map */
