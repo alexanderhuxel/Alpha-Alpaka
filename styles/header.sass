@@ -11,12 +11,13 @@ nav
         display: flex
         list-style: none
         align-items: center
-        @media screen and ( max-width: 600px )
+        @media screen and ( max-width: 950px )
             display: none
         li
             &:nth-of-type(5)
                 margin: 0px 80px 0px 48px
             a
+                transition: ease-in-out 225ms
                 text-decoration: none
                 line-height: 24px
                 font-size: 16px
@@ -30,13 +31,17 @@ nav
             font-weight: 700
             color: $white
             border: none
+            transition: ease-in-out 225ms
+            &:hover
+                cursor: pointer
+                color: $fontcolorBlack
 
 header
     background: $gray
     height: auto
     position: relative
     z-index: 10
-    @media screen and ( max-width:600  )
+    @media screen and ( max-width:900  )
         display: flex
         justify-content: center
         align-items: center
@@ -50,8 +55,10 @@ header
     display: flex
     flex-direction: column
     align-items: center
-    @media screen and ( max-width:  600px)
-        display: none
+    &:hover
+        cursor: pointer
+    @media screen and ( max-width:  900px)
+        display: none!important
 
     img
         &:hover
@@ -68,9 +75,9 @@ section
     justify-content: space-between
     align-items: flex-start
     position: relative
-    @media screen and ( max-width: 600px )
-        width: auto
-        margin: 490px 15px 0px 15px
+    @media screen and ( max-width: 900px )
+        width: auto!important
+        margin: 490px 15px 0px 15px!important
         h1
             font-size: 50px!important
             line-height: 56px
@@ -85,12 +92,15 @@ section
         button
             margin: 0px auto 0px auto
             margin-bottom: 60px!important
-        img
-            margin: 0px auto 0px auto
-        img
-            position: absolute
-            top: -15px
-            left: 50%
+        a
+            img
+                position: absolute
+                top: -520px
+                left: 50vw
+    @media screen and ( max-width:  1200px)
+        margin-left: 250px
+    @media screen and ( max-width: 1100px )
+        margin-left: 190px
 
     h1
         margin: 0px
@@ -112,9 +122,12 @@ section
         padding: 12px 24px 12px 24px
         font-weight: 700
         margin-bottom: 186px
+        transition: ease-in-out 225ms
         &:hover
             cursor: pointer
+            color: $ligthblue
     img
+        margin-bottom: 20px
         &:hover
             cursor: pointer
 .label
@@ -123,11 +136,15 @@ section
     position: absolute
     top: 58px
     left: 223px
-    @media screen and ( max-width: 600px )
+    @media screen and ( max-width: 900px )
         width: 120px
         height: 120px
         top: 20px
         left: 20px
+    @media screen and ( max-width: 1200px )
+        left: 120px
+    @media screen and ( max-width: 1100px )
+        left: 60px
 
     img
         width: 240px
@@ -136,13 +153,26 @@ section
     position: absolute
     width: 900px
     height: 900px
-    top: 35px
-    left: -162px
-    @media screen and ( max-width: 600px )
-        width: 628px
-        height: 628px
-        top: 40px
-        left: -180px
+    top: 150px
+    left: 662px
+    @media screen and ( max-width: 900px )
+        width: 628px!important
+        height: 628px!important
+        top: 40px!important
+        left: -80px!important
+    @media screen and ( max-width: 1200px )
+        left: 550px
+    @media screen and ( max-width: 1100px )
+        left: 450px
+    @media screen and ( max-width:  1000px)
+        width: 500px!important
+        height: 500px!important
+        left: 510px
+
+    @media screen and ( max-width: 1400px )
+        width: 700px
+        height: 700px
+
 .menu
     display: none
     position: absolute
@@ -150,5 +180,7 @@ section
     right: 40px
     height: 24px
     width: 24px
-    @media screen and ( max-width: 600px )
+    &:hover
+        cursor: pointer
+    @media screen and ( max-width: 950px )
         display: block

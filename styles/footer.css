@@ -12,7 +12,8 @@ body, html {
   font-family: dinosaur; }
 
 html {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  scroll-behavior: smooth; }
 
 .ml23 {
   margin-left: 23px; }
@@ -26,14 +27,32 @@ html {
 .mr15 {
   margin-right: 15px; }
 
+a {
+  position: relative; }
+  a:hover::after {
+    width: 100%; }
+  a::after {
+    transition: ease-in-out 225ms;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: #212429;
+    bottom: -5px;
+    border-radius: 10px;
+    left: 0px;
+    position: absolute; }
+
 .row {
+  margin-top: 250px;
   display: flex;
   justify-content: center;
   align-items: center; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1130px) {
     .row {
       flex-direction: column; } }
   .row .box {
+    z-index: 10;
+    position: relative;
     line-height: 40px;
     font-size: 24px;
     display: flex;
@@ -42,6 +61,9 @@ html {
     justify-content: center;
     width: 370px;
     height: 200px; }
+    @media screen and (max-width: 900px) {
+      .row .box {
+        width: 100vw; } }
     .row .box p {
       margin-bottom: 47px; }
     .row .box:nth-of-type(1) {
@@ -52,6 +74,7 @@ html {
       background: #E0DED8; }
 
 footer {
+  margin-top: -200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,7 +82,7 @@ footer {
   footer ul {
     list-style: none;
     display: flex; }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 900px) {
       footer ul {
         padding-left: 0px; } }
     footer ul li a {
@@ -71,7 +94,7 @@ footer {
 .logo {
   width: 254px;
   height: 148px;
-  margin: 40px 0px 80px 0px; }
+  margin: 80px 0px 80px 0px; }
 
 .socialmedia img {
   margin: 0px 10px 0px 10px; }

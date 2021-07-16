@@ -12,7 +12,8 @@ body, html {
   font-family: dinosaur; }
 
 html {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  scroll-behavior: smooth; }
 
 .ml23 {
   margin-left: 23px; }
@@ -25,5 +26,20 @@ html {
 
 .mr15 {
   margin-right: 15px; }
+
+a {
+  position: relative; }
+  a:hover::after {
+    width: 100%; }
+  a::after {
+    transition: ease-in-out 225ms;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: #212429;
+    bottom: -5px;
+    border-radius: 10px;
+    left: 0px;
+    position: absolute; }
 
 /*# sourceMappingURL=styles.css.map */

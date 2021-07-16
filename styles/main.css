@@ -12,7 +12,8 @@ body, html {
   font-family: dinosaur; }
 
 html {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  scroll-behavior: smooth; }
 
 .ml23 {
   margin-left: 23px; }
@@ -25,6 +26,21 @@ html {
 
 .mr15 {
   margin-right: 15px; }
+
+a {
+  position: relative; }
+  a:hover::after {
+    width: 100%; }
+  a::after {
+    transition: ease-in-out 225ms;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: #212429;
+    bottom: -5px;
+    border-radius: 10px;
+    left: 0px;
+    position: absolute; }
 
 main {
   position: relative;
@@ -39,7 +55,7 @@ main {
   flex-direction: column;
   align-items: center;
   margin-top: 170px; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 900px) {
     .headline {
       margin-top: 80px; }
       .headline h2, .headline p {
@@ -53,7 +69,9 @@ main {
   .headline p {
     width: 1120px;
     line-height: 40px;
-    font-size: 24px; }
+    font-size: 24px;
+    margin: 0px 15px 0px 15px;
+    width: 90%; }
 
 .bar {
   position: absolute;
@@ -64,25 +82,68 @@ main {
   background: #83BAEA;
   transform: rotate(-41deg);
   z-index: 0; }
+  @media screen and (max-width: 900px) {
+    .bar {
+      display: none !important; } }
+  @media screen and (max-width: 1690px) {
+    .bar {
+      left: -489px;
+      top: 441px; } }
+  @media screen and (max-width: 1530px) {
+    .bar {
+      left: -351px;
+      top: 384px; } }
+  @media screen and (max-width: 1000px) {
+    .bar {
+      left: -351px;
+      top: 384px; } }
+  @media screen and (max-width: 1001px) {
+    .bar {
+      left: -287px;
+      top: 321px; } }
 
 .beer-informations {
   z-index: 10;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
   margin: 0px auto 0px auto;
-  display: flex; }
+  display: flex;
+  width: 100%; }
+  @media screen and (max-width: 900px) {
+    .beer-informations {
+      flex-direction: column; } }
   .beer-informations .bottle {
     width: 900px;
     height: 900px; }
+    @media screen and (max-width: 900px) {
+      .beer-informations .bottle {
+        order: 5;
+        width: 900px !important;
+        height: 900px !important; } }
+    @media screen and (max-width: 1400px) {
+      .beer-informations .bottle {
+        width: 700px;
+        height: 700px; } }
+    @media screen and (max-width: 1100px) {
+      .beer-informations .bottle {
+        width: 500px;
+        height: 500px; } }
   .beer-informations .information {
-    width: 540px; }
+    width: 25%; }
+    @media screen and (max-width: 900px) {
+      .beer-informations .information {
+        width: 100%; }
+        .beer-informations .information p, .beer-informations .information h6, .beer-informations .information h2 {
+          margin: 0px 15px 0px 15px; }
+        .beer-informations .information h6 {
+          color: #83BAEA !important; } }
     .beer-informations .information p:nth-of-type(1) {
       line-height: 40px;
       font-size: 24px;
       margin-bottom: 40px; }
     .beer-informations .information p:nth-of-type(2) {
-      line-height: 32px;
+      line-height: 24px;
       font-size: 16px;
       font-style: light;
       font-family: dinosaur-light; }
@@ -90,7 +151,7 @@ main {
       color: #ffff;
       line-height: 16px;
       font-size: 14px;
-      margin-top: 200px;
+      margin-top: 120px;
       margin-bottom: 16px; }
     .beer-informations .information h2 {
       margin-bottom: 80px;
@@ -98,6 +159,10 @@ main {
       font-size: 24px; }
   .beer-informations .ingredients {
     display: flex; }
+    @media screen and (max-width: 900px) {
+      .beer-informations .ingredients {
+        flex-direction: column;
+        margin-top: -20px; } }
     .beer-informations .ingredients .ingredient {
       margin-top: 40px;
       width: 160px;
@@ -106,6 +171,25 @@ main {
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start; }
+      @media screen and (max-width: 900px) {
+        .beer-informations .ingredients .ingredient {
+          padding: 0px !important;
+          margin-left: 15px;
+          border: none !important;
+          margin-bottom: 0px !important;
+          height: 50px; }
+          .beer-informations .ingredients .ingredient .lineOne {
+            margin: 0px; }
+          .beer-informations .ingredients .ingredient .lineTwo {
+            margin: 0px; } }
+      @media screen and (max-width: 1200px) {
+        .beer-informations .ingredients .ingredient:nth-of-type(1) {
+          margin-right: 20px; }
+        .beer-informations .ingredients .ingredient:nth-of-type(2) {
+          margin-left: 20px;
+          padding-right: 20px; }
+        .beer-informations .ingredients .ingredient:nth-of-type(3) {
+          margin-right: 20px; } }
       .beer-informations .ingredients .ingredient:nth-of-type(2) {
         padding-left: 30px;
         border-left: solid 0.5px #ACB5BD;
@@ -122,22 +206,48 @@ main {
         line-height: 24px;
         color: #ACB5BD;
         margin: 5px 0px 50px 0px; }
-
-.bars {
-  margin-bottom: 250px;
-  display: flex;
-  flex-direction: column; }
-  .bars .progress progress {
+  .beer-informations .bars {
+    margin-bottom: 31px;
+    display: flex;
+    flex-direction: column; }
+    @media screen and (max-width: 900px) {
+      .beer-informations .bars {
+        margin-top: 100px; } }
+  @media screen and (max-width: 900px) {
+    .beer-informations .progress h5 {
+      margin-left: 15px !important;
+      margin-bottom: 0px; } }
+  .beer-informations .progress progress {
     width: 225px;
     height: 5px;
     border-radius: 20px; }
-    .bars .progress progress::-moz-progress-bar {
+    @media screen and (max-width: 900px) {
+      .beer-informations .progress progress {
+        width: calc( 100% - 30px ) !important;
+        margin: 0px 15px 0px 15px !important; } }
+    .beer-informations .progress progress::-moz-progress-bar {
       background: #83BAEA; }
-  .bars .upperLine {
+  .beer-informations .upperLine {
     display: flex;
     letter-spacing: 2px; }
-  .bars .lowerLine {
+    @media screen and (max-width: 900px) {
+      .beer-informations .upperLine {
+        flex-direction: column; } }
+    @media screen and (max-width: 1200px) {
+      .beer-informations .upperLine {
+        flex-direction: column; }
+        .beer-informations .upperLine h5, .beer-informations .upperLine progress {
+          margin-left: 0px; } }
+  .beer-informations .lowerLine {
     display: flex;
     letter-spacing: 2px; }
+    @media screen and (max-width: 900px) {
+      .beer-informations .lowerLine {
+        flex-direction: column; } }
+    @media screen and (max-width: 1200px) {
+      .beer-informations .lowerLine {
+        flex-direction: column; }
+        .beer-informations .lowerLine h5, .beer-informations .lowerLine progress {
+          margin-left: 0px; } }
 
 /*# sourceMappingURL=main.css.map */

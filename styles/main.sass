@@ -12,7 +12,7 @@ main
     flex-direction: column
     align-items: center
     margin-top: 170px
-    @media screen and ( max-width: 600px )
+    @media screen and ( max-width: 900px )
         margin-top: 80px
         h2,p
             width: 90%!important
@@ -22,10 +22,13 @@ main
             margin-top: 50px
     h2
         font-size: 40px
+
     p
         width: 1120px
         line-height: 40px
         font-size: 24px
+        margin: 0px 15px 0px 15px
+        width: 90%
 .bar
     position: absolute
     width: 160vw
@@ -35,25 +38,61 @@ main
     background: #83BAEA
     transform: rotate(-41deg)
     z-index: 0
+    @media screen and ( max-width: 900px )
+        display: none!important
+    @media screen and ( max-width: 1690px  )
+        left: -489px
+        top: 441px
+    @media screen and ( max-width: 1530px )
+        left: -351px
+        top: 384px
+    @media screen and ( max-width: 1000px  )
+        left: -351px
+        top: 384px
+    @media screen and ( max-width: 1001px )
+        left: -287px
+        top: 321px
+
 .beer-informations
     z-index: 10
-    justify-content: center
+    justify-content: flex-start
     align-items: center
     position: relative
     margin: 0px auto 0px auto
     display: flex
+    width: 100%
+    @media screen and ( max-width: 900px  )
+        flex-direction: column
+
     .bottle
         width: 900px
         height: 900px
+        @media screen and ( max-width: 900px )
+            order: 5
+            width: 900px!important
+            height: 900px!important
+        @media screen and ( max-width: 1400px )
+            width: 700px
+            height: 700px
+        @media screen and ( max-width: 1100px )
+            width: 500px
+            height: 500px
     .information
-        width: 540px
+        width: 25%
+        @media screen and ( max-width: 900px )
+            width: 100%
+            p,h6,h2
+                margin: 0px 15px 0px 15px
+            h6
+                color: $ligthblue!important
+
         p
             &:nth-of-type(1)
                 line-height: 40px
                 font-size: 24px
                 margin-bottom: 40px
             &:nth-of-type(2)
-                line-height: 32px
+                line-height: 24px
                 font-size: 16px
                 font-style: light
                 font-family: dinosaur-light
@@ -61,7 +100,7 @@ main
             color: $white
             line-height: 16px
             font-size: 14px
-            margin-top: 200px
+            margin-top: 120px
             margin-bottom: 16px
         h2
             margin-bottom: 80px
@@ -69,6 +108,10 @@ main
             font-size: 24px
     .ingredients
         display: flex
+        @media screen and ( max-width: 900px )
+            flex-direction: column
+            margin-top: -20px
+
         .ingredient
             margin-top: 40px
             width: 160px
@@ -77,6 +120,25 @@ main
             flex-direction: column
             justify-content: flex-start
             align-items: flex-start
+            @media screen and ( max-width: 900px )
+                padding: 0px!important
+                margin-left: 15px
+                border: none!important
+                margin-bottom: 0px!important
+                height: 50px
+                .lineOne
+                    margin: 0px
+                .lineTwo
+                    margin: 0px
+            @media screen and ( max-width: 1200px )
+                &:nth-of-type(1)
+                    margin-right: 20px
+                &:nth-of-type(2)
+                    margin-left: 20px
+                    padding-right: 20px
+                &:nth-of-type(3)
+                    margin-right: 20px
+
             &:nth-of-type(2)
                 padding-left: 30px
                 border-left: solid 0.5px $gray2
@@ -94,22 +156,45 @@ main
                 line-height: 24px
                 color: $gray2
                 margin: 5px 0px 50px 0px
-.bars
-    margin-bottom: 250px
-    display: flex
-    flex-direction: column
+    .bars
+        margin-bottom: 31px
+        display: flex
+        flex-direction: column
+        @media screen and ( max-width: 900px )
+            margin-top: 100px
+
     .progress
+        @media screen and ( max-width: 900px )
+            h5
+                margin-left: 15px!important
+                margin-bottom: 0px
+
         progress
             width: 225px
             height: 5px
             border-radius: 20px
+            @media screen and ( max-width: 900px )
+                width: calc( 100% - 30px )!important
+                margin: 0px 15px 0px 15px!important
             &::-moz-progress-bar
                 background: $ligthblue
 
     .upperLine
         display: flex
         letter-spacing: 2px
+        @media screen and ( max-width: 900px )
+            flex-direction: column
+        @media screen and ( max-width: 1200px )
+            flex-direction: column
+            h5,progress
+                margin-left: 0px
 
     .lowerLine
         display: flex
         letter-spacing: 2px
+        @media screen and ( max-width: 900px )
+            flex-direction: column
+        @media screen and ( max-width: 1200px )
+            flex-direction: column
+            h5,progress
+                margin-left: 0px
